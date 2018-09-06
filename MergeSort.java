@@ -10,7 +10,7 @@ public class MergeSort {
 		int start=0;		//0
 		int end=A.length;  //4
 		
-		System.out.println("Массив до сортировки");
+		System.out.println("РњР°СЃСЃРёРІ РґРѕ СЃРѕСЂС‚РёСЂРѕРІРєРё");
 		for(int i: A)
 		{
 			System.out.println(i);
@@ -18,13 +18,13 @@ public class MergeSort {
 		
 		A=Sort(A);
 		
-		System.out.println("Массив после сортировки");
+		System.out.println("РњР°СЃСЃРёРІ РїРѕСЃР»Рµ СЃРѕСЂС‚РёСЂРѕРІРєРё");
 		for(int i: A)
 		{
 			System.out.println(i);
 		}
 		
-		System.out.println("Сортировка завершена");
+		System.out.println("РЎРѕСЂС‚РёСЂРѕРІРєР° Р·Р°РІРµСЂС€РµРЅР°");
 		
 	}
 
@@ -48,7 +48,7 @@ public class MergeSort {
 
 	private static int[] merge(int[] first, int[] second) {
 		
-		int i=0,j=0; // индексы двух подмассивов first и second
+		int i=0,j=0; // ГЁГ­Г¤ГҐГЄГ±Г» Г¤ГўГіГµ ГЇГ®Г¤Г¬Г Г±Г±ГЁГўГ®Гў first ГЁ second
 		int l1=first.length;
 		int l2=second.length;
 		int B[]=new int[first.length+second.length];
