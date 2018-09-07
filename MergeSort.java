@@ -1,16 +1,14 @@
-package anotherMethod;
-
-import java.util.Arrays;
+package Sorting;
 
 public class MergeSort {
 
 	public static void main(String[] args) {
 		
-		int [] A={5,2,4,128,1,1,3,2,6,5,-16}; //,4,6
-		int start=0;		//0
-		int end=A.length;  //4
+		int [] A={5,2,4,128,1,1,3,2,6,5,-5}; // original array
+		int start=0;		
+		int end=A.length;  
 		
-		System.out.println("Массив до сортировки");
+		System.out.println("Before sorting");
 		for(int i: A)
 		{
 			System.out.println(i);
@@ -18,27 +16,34 @@ public class MergeSort {
 		
 		A=Sort(A);
 		
-		System.out.println("Массив после сортировки");
+		System.out.println("After sorting");
 		for(int i: A)
 		{
 			System.out.println(i);
 		}
 		
-		System.out.println("Сортировка завершена");
+		System.out.println("Done");
 		
 	}
 
 	private static int[] Sort(int[] a) {
 		int start=0;
-		int end=a.length-1;
-		if(a.length==1)
+		int end=a.length;
+		if(a.length==1)		// divide until a.len = 1
 			{
 				return a;
 			}
 		else { 
 			int mid=(a.length)/2;
-			int first[]=Arrays.copyOfRange(a, start, mid);       
-			int second[]=Arrays.copyOfRange(a, mid, end+1); 
+			int first[] = new int[mid];
+			int second[] = new int[end-mid];                           
+												 
+			for (int i = 0; i < a.length; i++) { 
+                if (i < mid)
+                    first[i] = a[i];
+                else
+                    second[i - mid] = a[i];
+            }
 			first=Sort(first);
 			second=Sort(second);
 			return merge(first,second);
@@ -48,7 +53,7 @@ public class MergeSort {
 
 	private static int[] merge(int[] first, int[] second) {
 		
-		int i=0,j=0; // èíäåêñû äâóõ ïîäìàññèâîâ first è second
+		int i=0,j=0; // indexes of first and second subarrays
 		int l1=first.length;
 		int l2=second.length;
 		int B[]=new int[first.length+second.length];
