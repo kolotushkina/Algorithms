@@ -18,14 +18,11 @@ public class BubbleSort {
 		for(int num: nums)
 		{
 			System.out.println(num);
-		}
-		
+		}		
 		System.out.println("Done!");
-
 	}
 
-	private static int[] sort(int[] nums) {
-		
+	private static int[] sort(int[] nums) {		
 		for(int i=0;i<nums.length;i++)
 		{
 			for(int j=0;j<nums.length-1;j++)
@@ -37,10 +34,8 @@ public class BubbleSort {
 					nums[j]=temp;					
 				}
 			}
-		}
-		
+		}		
 		return nums;
 	}
-
 }
 
