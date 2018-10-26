@@ -3,7 +3,6 @@ package Searching;
 import java.util.Arrays;
 
 public class BinarySearch {
-
 	public static void main(String[] args) {
 		int [] nums={43,12,3,-54,34,908,4,-2,6};
 		Arrays.sort(nums);
@@ -12,8 +11,7 @@ public class BinarySearch {
 			System.out.println("Element found");
 		else		
 			System.out.println("Element not found");		
-	}
-		
+	}		
 	
 	private static boolean search(int [] nums, int num)
 	{
@@ -27,6 +25,5 @@ public class BinarySearch {
 			return search(Arrays.copyOfRange(nums, 0, middle),num);
 		else 
 			return search(Arrays.copyOfRange(nums, middle+1, nums.length),num);		
-	}
-	
+	}	
 }
